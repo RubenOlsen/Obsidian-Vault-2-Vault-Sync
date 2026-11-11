@@ -1,0 +1,25 @@
+{
+  "name": "vault-to-vault-sync",
+  "version": "1.0.0",
+  "description": "Sync selected folders between two Obsidian vaults on disk, one-way or two-way.",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "build": "node esbuild.config.mjs production",
+    "dev": "node esbuild.config.mjs",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck && npm run build && npm test",
+    "version": "node version-bump.mjs && git add manifest.json versions.json",
+    "link-vault": "node scripts/link-into-vault.mjs"
+  },
+  "keywords": ["obsidian", "plugin", "sync"],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "esbuild": "^0.24.0",
+    "obsidian": "^1.7.2",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  }
+}

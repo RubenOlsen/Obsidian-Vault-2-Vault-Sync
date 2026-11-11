@@ -1,0 +1,9 @@
+{
+  "id": "vault-to-vault-sync",
+  "name": "Vault-to-Vault Sync",
+  "version": "1.0.0",
+  "minAppVersion": "1.7.0",
+  "description": "Sync selected folders between two vaults on disk, one-way or two-way, with conflict-safe copies.",
+  "author": "Ruben Olsen Lærk",
+  "isDesktopOnly": true
+}

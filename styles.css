@@ -1,0 +1,53 @@
+/* ABOUTME: Styles for the Vault-to-Vault Sync settings screen. */
+/* ABOUTME: Compact, scrollable synced-folder list so many folders don't push the controls off-screen. */
+
+.vvsync-folder-list {
+  max-height: 220px;
+  overflow-y: auto;
+  margin-bottom: 12px;
+  padding: 4px 8px;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 6px;
+}
+
+.vvsync-folder-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 2px 0;
+  font-size: var(--font-ui-small);
+}
+
+.vvsync-folder-row:not(:last-child) {
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.vvsync-folder-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.vvsync-folder-inactive {
+  color: var(--text-warning);
+}
+
+.vvsync-folder-remove {
+  flex: 0 0 auto;
+  padding: 0 8px;
+  line-height: 1.4;
+  cursor: pointer;
+  background: transparent;
+  box-shadow: none;
+  color: var(--text-muted);
+}
+
+.vvsync-folder-remove:hover {
+  color: var(--text-error);
+}
+
+.vvsync-empty {
+  color: var(--text-muted);
+  font-size: var(--font-ui-small);
+}
