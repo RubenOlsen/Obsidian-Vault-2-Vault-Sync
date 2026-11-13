@@ -53,7 +53,7 @@ export class SyncSettingsTab extends PluginSettingTab {
         }),
       );
 
-    containerEl.createEl('h3', { text: 'Synced folders' });
+    new Setting(containerEl).setName('Synced folders').setHeading();
 
     if (data.mappings.length === 0) {
       containerEl.createEl('p', { text: 'No folders synced yet.', cls: 'vvsync-empty' });
@@ -87,7 +87,7 @@ export class SyncSettingsTab extends PluginSettingTab {
       });
     }
 
-    containerEl.createEl('h3', { text: 'Maintenance' });
+    new Setting(containerEl).setName('Maintenance').setHeading();
     new Setting(containerEl)
       .setName('Compact sync logs')
       .setDesc('Reduce log size by keeping only the latest entry per file.')
@@ -97,7 +97,7 @@ export class SyncSettingsTab extends PluginSettingTab {
         }),
       );
 
-    containerEl.createEl('h3', { text: 'Add a folder' });
+    new Setting(containerEl).setName('Add a folder').setHeading();
 
     let sourceInput = '';
     let destInput = '';

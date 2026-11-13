@@ -37,8 +37,9 @@ export default class VaultToVaultSyncPlugin extends Plugin {
     this.buildEngine();
     this.registerVaultEvents();
     this.addSettingTab(new SyncSettingsTab(this.app, this));
-    this.app.workspace.onLayoutReady(() => {
-      void this.reconcileAll().then(() => this.runDiscovery());
+    this.app.workspace.onLayoutReady(async () => {
+      await this.reconcileAll();
+      await this.runDiscovery();
     });
   }
 
