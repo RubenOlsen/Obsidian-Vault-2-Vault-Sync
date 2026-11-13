@@ -11,20 +11,19 @@ is changed on both sides, the incoming version is written as a timestamped
 ## Use case
 
 The plugin author became fed up with maintaining the same information manually in two
-vaults and rsync outside the Obsidian program becomes very hackish very fast. 
+vaults and rsync outside the Obsidian program becomes very hackish very fast.
 
 The main use case is when you have two vaults: One for work use and one private use
 and there are some information that you want to have in both vaults. Example of this
 kind of information is pure knowledge like unix commands, links to public articles,
 copies of said articles into a vault, general development information, generalized
-Splunk SPLs, Jira JQLs, Azure KQLs, SpringBoot interview questions used to vet 
+Splunk SPLs, Jira JQLs, Azure KQLs, SpringBoot interview questions used to vet
 prospective consultants, and so on.
 
-This kind of information is seldom under NDA. However, most companies will not allow 
-their employees to sync a work related vault to their non work machines, but they 
-also cannot deny employees to take pure knowledge out of the workplace as long as the 
-knowlege is not under NDA or other legal agreements.
-
+This kind of information is seldom under NDA. However, most companies will not allow
+their employees to sync a work related vault to their non work machines, but they
+also cannot deny employees to take pure knowledge out of the workplace as long as the
+knowledge is not under NDA or other legal agreements.
 
 ## Requirements
 
@@ -35,9 +34,6 @@ knowlege is not under NDA or other legal agreements.
   instance is enough for correctness; running both just makes propagation live.
 
 ## Manual installation
-
-Fetch the plugin from https://github.com/RubenOlsen/Obsidian-Vault-2-Vault-Sync/releases
-plugins list.
 
 1. Download `main.js`, `manifest.json`, and `styles.css` from the latest
    [release](../../releases).
@@ -59,9 +55,9 @@ In the plugin settings:
    `two-way`), and click **Add folder**.
 
 For two-way, the simplest path is to set a folder up as two-way in vault A. Vault
-A drops a small marker into vault B. Now install the plugin in vault B, and the 
+A drops a small marker into vault B. Now install the plugin in vault B, and the
 next time vault B is open it offers to enable the matching two-way sync automatically.
-On installation and enabling the plugin the two-way synch should also be automatically
+On installation and enabling the plugin the two-way sync should also be automatically
 available.
 
 ## How it works
