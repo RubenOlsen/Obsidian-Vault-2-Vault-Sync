@@ -28,3 +28,7 @@ During subagent-driven-development, an implementer subagent's git activity (comm
 
 ## Installing the plugin in a second vault (two-way)
 For two-way, BOTH vaults run the plugin, each needing its OWN `data.json` (own `vaultId`, mappings). The source vault here is symlinked in (`npm run link-vault` → `../vaults/Vault A/.obsidian/plugins/vault-to-vault-sync` → repo), which auto-updates on rebuild. The second vault must get the plugin COPIED in (real `manifest.json`+`main.js`+`styles.css` under `<VaultB>/.obsidian/plugins/vault-to-vault-sync/`), NOT symlinked — a symlink would make both vaults share one `data.json`. Enable it via `<VaultB>/.obsidian/community-plugins.json` = `["vault-to-vault-sync"]`. Gotcha: a copied install does NOT auto-update — every `npm run build` must be manually re-copied into the second vault; reload the plugin (toggle off/on or Cmd+R) after.
+
+## Pushing to main
+
+Personal repo. When asked to "commit and push", fast-forward main and push it; no PR needed. Branch for in-progress work if you like.
